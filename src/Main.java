@@ -24,8 +24,7 @@ public class Main {
                     String nombreMedicina = scanner.next();
                     System.out.print("Ingrese la cantidad: ");
                     int cantidadMedicina = scanner.nextInt();
-                    Medicina medicina = new Medicina(nombreMedicina, cantidadMedicina);
-                    farmacia.agregarMedicina(medicina);
+                    farmacia.agregarMedicina(nombreMedicina, cantidadMedicina);
                     break;
 
                 case 2:
@@ -38,8 +37,8 @@ public class Main {
                     String nombreReceta = scanner.next();
                     System.out.print("Ingrese la cantidad: ");
                     int cantidadReceta = scanner.nextInt();
-                    System.out.print("Ingrese el nombre y apellido del paciente: ");
-                    scanner.nextLine(); // Consumir el salto de línea pendiente
+                    System.out.print("Ingrese el nombre del paciente: ");
+                    scanner.nextLine();
                     String nombrePaciente = scanner.nextLine();
                     System.out.print("Ingrese el número de cédula del paciente: ");
                     String cedulaPaciente = scanner.next();
@@ -52,8 +51,7 @@ public class Main {
                     farmacia.mostrarRecetas();
                     System.out.print("Ingrese el número de receta a despachar: ");
                     int numeroReceta = scanner.nextInt();
-                    MedicinaRecetada recetaDespachar = farmacia.recetas.get(numeroReceta - 1);
-                    farmacia.despacharReceta(recetaDespachar);
+                    farmacia.despacharReceta(numeroReceta);
                     break;
 
                 case 5:
